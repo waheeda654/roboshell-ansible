@@ -1,20 +1,16 @@
 - name: Adding Application User
-   id roboshop >/dev/null 2>&1
-   if [ $? -ne 0 ]; then
-   useradd roboshop
-   fi
-
-
+  ansible.builtin.user:
+     name: roboshop
 
 - name: Remove old content
   ansible.builtin.file:
-    path: "{{app_path}}"
+    path: "{{ app_path }}"
     state: absent
 
 
 - name: Create App Directory
   ansible.builtin.file:
-    path: "{{app_path}}"
+    path: "{{ app_path }}"
     state: directory
 
 
