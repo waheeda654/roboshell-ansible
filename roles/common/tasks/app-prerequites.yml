@@ -1,8 +1,8 @@
 - name: Adding Application User
-    id roboshop >/dev/null 2>&1
-    if [ $? -ne 0 ]; then
-    useradd roboshop
-    fi
+   id roboshop >/dev/null 2>&1
+   if [ $? -ne 0 ]; then
+   useradd roboshop
+   fi
 
 
 
