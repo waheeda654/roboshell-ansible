@@ -3,11 +3,11 @@
 
 
 - name: Enable NodejS 20 Module
-  ansible builtin.shell: dnf module enable nodejs:20 -y
+  ansible.builtin.shell: dnf module enable nodejs:20 -y
 
 
 - name: Install Nodejs
-  ansible builtin.dnf:
+  ansible.builtin.dnf:
     name: nodejs
     state: latest
 
